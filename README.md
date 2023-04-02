@@ -2,6 +2,7 @@
 Equipo 12
 
 Integrantes:
+
 Lucas Fernández
 
 Francisco Toloza
