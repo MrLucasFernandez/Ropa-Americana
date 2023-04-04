@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,17 +20,16 @@
         <header>
             <div>
                 <!-- Carrusel Header -->
-                <div id="demo" class="carousel slide" data-bs-ride="carousel">
+                <div id="header" class="carousel slide" data-bs-ride="carousel">
                     <!-- Texto Carrusel -->
-                    <div class="carousel-inner">
+                    <div id="fuente-header" class="carousel-inner">
                         <div class="carousel-item active">
-                            <h6 id="fuente-header"class="text-center p-1 pt-2">Envío gratis por compras sobre $40.000</h6>
+                            <h6 class="text-center p-1 pt-2">Envío gratis por compras sobre $40.000</h6>
                         </div>
                         <div class="carousel-item">
-                            <h6 id="fuente-header"class="text-center p-1 pt-2">Suscribete al newsletter y recibe un 15% de DCTO en tu primera compra</h6>
+                            <h6 class="text-center p-1 pt-2">Suscribete al newsletter y recibe un 15% de DCTO en tu primera compra</h6>
                         </div>
                     </div>
-                    
                 </div>
             </div>
             <div class="container-fluid p-0">
@@ -59,8 +58,8 @@
                                 <a class="rounded me-2" href="login.html"><i class="fa-solid fa-user p-2 text-white"></i></a>
                                 <a class="rounded me-2" href="carrito.html"><i class="fa-solid fa-cart-shopping p-2 text-white"></i></a>
                                 
-                                <input class="form-control me-2" type="text" placeholder="">
-                                <a href="#"><i class="fa-solid fa-magnifying-glass p-2 text-white"></i></a>
+                                <input class="form-control me-2" type="text" placeholder="buscar">
+                                <a href="javascript:void(0)"><i class="fa-solid fa-magnifying-glass p-2 text-white"></i></a>
                             </form>
                         </div>
                     </div>
@@ -69,40 +68,40 @@
         </header>
         <div>
             <!-- Carrusel -->
-            <div id="demo" class="carousel slide" data-bs-ride="carousel">
+            <div id="carrusel" class="carousel slide" data-bs-ride="carousel">
                 <!-- Botones indicadores -->
                 <div class="carousel-indicators">
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#carrusel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#carrusel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carrusel" data-bs-slide-to="2"></button>
                 </div>
                 
                 <!-- Imagenes carrusel -->
                 <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="Imagenes/carrusel1.png" alt="Carrusel 1" class="d-block" style="width:100%">
+                    <img src="Imagenes/carrusel1.png" alt="Carrusel_1" class="d-block ancho-total">
                     <!--<div class="carousel-caption">
                         <h3>Hombre</h3>
                         <p>Texto de ejemplo</p>
                     </div>-->
                 </div>
                 <div class="carousel-item">
-                    <img src="Imagenes/carrusel2.png" alt="Carrusel 2" class="d-block" style="width:100%">
+                    <img src="Imagenes/carrusel2.png" alt="Carrusel_2" class="d-block ancho-total">
                     <div class="carousel-caption">
                     </div> 
                 </div>
                 <div class="carousel-item">
-                    <img src="Imagenes/carrusel3.png" alt="Carrusel 3" class="d-block" style="width:100%">
+                    <img src="Imagenes/carrusel3.png" alt="Carrusel_3" class="d-block ancho-total">
                     <div class="carousel-caption">
                     </div>  
                 </div>
                 </div>
                 
                 <!--Controles movimiento-->
-                <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                <button class="carousel-control-prev" type="button" data-bs-target="#carrusel" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon"></span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                <button class="carousel-control-next" type="button" data-bs-target="#carrusel" data-bs-slide="next">
                 <span class="carousel-control-next-icon"></span>
                 </button>
             </div>
@@ -110,34 +109,175 @@
         <!--Titulo central-->
         <div id="fuente-titulo" class="p-5 text-center">
             <h1 class="fw-bold">Dale la vuelta</h1>
-            <p>Demosle una nueva vida a las prendas</p>
+            <p class="fst-italic">"Demosle una nueva vida a las prendas"</p>
         </div>
 
-        <!--Categorias imagenes-->
-        <div class="row text-center p-4 ancho-total m-0">
-            <div class="col-sm-12 col-lg-4">  
-                <a href="javascript:void(0)">
-                    <img src="Imagenes/promocion1.png" alt="Promo1">  
-                </a> 
-                <h4 id="fuente-titulo" class="fw-bold text-primary-emphasis pt-2">Nueva colección</h4>
+        <!--Categorias promociones-->
+        <div class="container-fluid">
+            <div class="row text-center">
+                <div class="col-xs-12 col-sm-4 p-2">  
+                    <a href="javascript:void(0)">
+                        <img src="Imagenes/promocion1.png" class="formato-img-promo" alt="Promo1">  
+                    </a> 
+                    <h4 id="fuente-titulo" class="estilo-promocion">Nueva colección</h4>
+                </div>
+                <div class="col-xs-12 col-sm-4 p-2">   
+                    <a href="javascript:void(0)">
+                        <img src="Imagenes/promocion2.png" class="formato-img-promo" alt="Promo2">
+                    </a>
+                    <h4 id="fuente-titulo" class="estilo-promocion">Descuentos de temporada</h4>
+                </div>
+                <div class="col-xs-12 col-sm-4 p-2">
+                    <a href="javascript:void(0)">
+                        <img src="Imagenes/promocion3.png" class="formato-img-promo" alt="Promo3">
+                    </a>
+                    <h4 id="fuente-titulo" class="estilo-promocion">Lo más vendido</h4>
+                </div>
             </div>
-            <div class="col-sm-12 col-lg-4">   
-                <a href="javascript:void(0)">
-                    <img src="Imagenes/promocion2.png" alt="Promo2">
-                </a>
-                <h4 id="fuente-titulo" class="fw-bold text-primary-emphasis pt-2">Descuentos de temporada</h4>
-            </div>
-            <div class="col-sm-12 col-lg-4">
-                <a href="javascript:void(0)">
-                    <img src="Imagenes/promocion3.png" alt="Promo3">
-                </a>
-                <h4 id="fuente-titulo" class="fw-bold text-primary-emphasis pt-2">Lo más vendido</h4>
+        </div>
+        
+        <br>
+        <hr>
+        <br>
+        <h2 id="fuente-titulo" class="p-4 text-center fw-bold">Productos destacados</h2>
+        
+
+        <!--  Carrusel productos -->
+        <div>
+            <div id="prod" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="organizador-card">
+                            <div class="card formato-card m-2">
+                                <a href="javascript:void(0)">
+                                    <div class="formato-img-card">
+                                        <img src="Imagenes/600x400.png" class="card-img-top" alt="card1">
+                                    </div> 
+                                </a>
+                                <div class="card-body">
+                                    <h4 class="card-title">Producto destacado</h4>
+                                    <p class="card-text">Descripción del producto</p>
+                                    <p class="card-text mt-0 mb-0">Talla:</p>
+                                    <p class="card-text mt-0" >Precio:</p>
+                                </div>
+                            </div>
+                            <div class="card d-none d-md-block formato-card m-2">
+                                <a href="javascript:void(0)">
+                                    <div class="formato-img-card">
+                                        <img src="Imagenes/600x400.png" class="card-img-top" alt="card2">
+                                    </div> 
+                                </a>
+                                
+                                <div class="card-body">
+                                    <h4 class="card-title">Producto destacado</h4>
+                                    <p class="card-text">Descripción del producto</p>
+                                    <p class="card-text mt-0 mb-0">Talla:</p>
+                                    <p class="card-text mt-0" >Precio:</p>
+                                </div>
+                            </div>
+                            <div class="card d-none d-md-block formato-card m-2">
+                                <a href="javascript:void(0)">
+                                    <div class="formato-img-card">
+                                        <img src="Imagenes/600x400.png" class="card-img-top" alt="card3">
+                                    </div> 
+                                </a>
+                                
+                                <div class="card-body">
+                                    <h4 class="card-title">Producto destacado</h4>
+                                    <p class="card-text">Descripción del producto</p>
+                                    <p class="card-text mt-0 mb-0">Talla:</p>
+                                    <p class="card-text mt-0" >Precio:</p>
+                                </div>
+                            </div>
+                            <div class="card d-none d-md-block formato-card m-2">
+                                <a href="javascript:void(0)">
+                                    <div class="formato-img-card">
+                                        <img src="Imagenes/600x400.png" class="card-img-top" alt="card4">
+                                    </div> 
+                                </a>
+                                
+                                <div class="card-body">
+                                    <h4 class="card-title">Producto destacado</h4>
+                                    <p class="card-text">Descripción del producto</p>
+                                    <p class="card-text mt-0 mb-0">Talla:</p>
+                                    <p class="card-text mt-0" >Precio:</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="organizador-card">
+                            <div class="card formato-card m-2">
+                                <a href="javascript:void(0)">
+                                    <div class="formato-img-card">
+                                        <img src="Imagenes/600x400.png" class="card-img-top" alt="card5">
+                                    </div> 
+                                </a>
+                                
+                                <div class="card-body">
+                                    <h4 class="card-title">Producto destacado</h4>
+                                    <p class="card-text">Descripción del producto</p>
+                                    <p class="card-text mt-0 mb-0">Talla:</p>
+                                    <p class="card-text mt-0" >Precio:</p>
+                                </div>
+                            </div>
+                            <div class="card d-none d-md-block formato-card m-2">
+                                <a href="javascript:void(0)">
+                                    <div class="formato-img-card">
+                                        <img src="Imagenes/600x400.png" class="card-img-top" alt="card6">
+                                    </div> 
+                                </a>
+                                
+                                <div class="card-body">
+                                    <h4 class="card-title">Producto destacado</h4>
+                                    <p class="card-text">Descripción del producto</p>
+                                    <p class="card-text mt-0 mb-0">Talla:</p>
+                                    <p class="card-text mt-0" >Precio:</p>
+                                </div>
+                            </div>
+                            <div class="card d-none d-md-block formato-card m-2">
+                                <a href="javascript:void(0)">
+                                    <div class="formato-img-card">
+                                        <img src="Imagenes/600x400.png" class="card-img-top" alt="card7">
+                                    </div> 
+                                </a>
+                                
+                                <div class="card-body">
+                                    <h4 class="card-title">Producto destacado</h4>
+                                    <p class="card-text">Descripción del producto</p>
+                                    <p class="card-text mt-0 mb-0">Talla:</p>
+                                    <p class="card-text mt-0" >Precio:</p>
+                                </div>
+                            </div>
+                            <div class="card d-none d-md-block formato-card m-2">
+                                <a href="javascript:void(0)">
+                                    <div class="formato-img-card">
+                                        <img src="Imagenes/600x400.png" class="card-img-top" alt="card8">
+                                    </div> 
+                                </a>
+                                
+                                <div class="card-body">
+                                    <h4 class="card-title">Producto destacado</h4>
+                                    <p class="card-text">Descripción del producto</p>
+                                    <p class="card-text mt-0 mb-0">Talla:</p>
+                                    <p class="card-text mt-0" >Precio:</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev boton-carrusel" type="button" data-bs-target="#prod" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next boton-carrusel" type="button" data-bs-target="#prod" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
             </div>
         </div>
         <br>
         <hr>
         <!--Mensaje-->
-        <div class="container mensaje justify-content-center p-4">
+        <div class="container mensaje-index justify-content-center p-4">
             <div class="row p-4 ancho-total">
                 <div class="col-sm-12 col-lg-3 text-center pt-2">
                     <img src="Imagenes/mensaje.png" alt="">
@@ -157,7 +297,7 @@
         <hr>
         <br>
         <!-- Newsletter-->
-        <div class="container justify-content-center p-4 newsletter">
+        <div class="container p-4 newsletter">
             <p class="fw-bold m-0 fs-5">Suscribete a nuestro boletín</p>
             <p class="small fst-italic">Recibe descuentos especiales y enterate de todas nuestras actualizaciones</p>
             <div class="container d-flex p-0">
@@ -166,7 +306,7 @@
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="newsletter">¡Gracias por tu suscripción!</h1>
+                                <h1 class="modal-title fs-5">¡Gracias por tu suscripción!</h1>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body med">
@@ -194,17 +334,18 @@
             </div>
             <div class="col-xs-12 col-md-6 col-lg-3">
                 <h4 class="fw-bold">Redes sociales</h4>
+                <i id="animacion" class="fa-brands fa-whatsapp pe-1 animacion"></i><i class="fa-brands fa-instagram animacion"></i>
                 <p class="m-0 small text-secondary">WhatsApp: +569 1234 5678</p>
                 <p class="small text-secondary">Instagram: @dalelavuelta</p>
             </div>
             <div class="col-xs-12 col-md-6 col-lg-3">
                 <h4 class="fw-bold">Info adicional</h4>
-                <p class="m-0 small text-secondary">Preguntas frecuentes</p>
-                <p class="small text-secondary">Opiniones de clientes</p>
+                <p class="m-0 small text-secondary animacion">Preguntas frecuentes</p>
+                <p class="small text-secondary animacion">Opiniones de clientes</p>
             </div>
         </footer>
         <div class="container-fluid text-center color-footer">
-            <p class="m-0">© 2023 Dale la vuelta Chile SpA. Todos los derechos reservados</p>
+            <p class="m-0">©2023 Dale la vuelta Chile SpA. Todos los derechos reservados</p>
         </div>
     </section>
 
