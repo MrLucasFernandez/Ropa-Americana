@@ -1,0 +1,228 @@
+{
+	"categorias":{
+		"ropaHombre":{
+			"0":{
+				"nombre": "Polera sin mangas",
+				"descripcion": "Polera color negro sin mangas",
+				"talla": "M",
+				"precio": "6000"
+			},
+			"1":{
+				"nombre": "Jeans corte recto",
+				"descripcion": "Jeans corte recto en color azul marino",
+				"talla": "46",
+				"precio": "12000"
+			},
+			"2":{
+				"nombre": "Jeans corte slim",
+				"descripcion": "Jeans corte slim fit en color gris",
+				"talla": "48",
+				"precio": "14000"
+			},
+			"3":{
+				"nombre": "Chaleco de algodón",
+				"descripcion": "Chaleco de algodón en color gris con cierre",
+				"talla": "L",
+				"precio": "10000"
+			},
+			"4":{
+				"nombre": "Camisa de vestir",
+				"descripcion": "Camisa de vestir color celeste",
+				"talla": "15/2",
+				"precio": "2000"
+			},
+			"5":{
+				"nombre": "Zapatos de futbol",
+				"descripcion": "Zapatos de futbol en color morado",
+				"talla": "39",
+				"precio": "35000"
+			},
+			"6":{
+				"nombre": "Jockey color azul marino",
+				"descripcion": "Jockey en color azul marino con visera ancha",
+				"talla": "Universal",
+				"precio": "7000"
+			},
+			"7":{
+				"nombre": "Pantalon de vestir",
+				"descripcion": "Pantalon de vestir en color beige con corte recto",
+				"talla": "40",
+				"precio": "12000"
+			},
+			"8":{
+				"nombre": "Camisa floral de color morado",
+				"descripcion": "Camisa floral de color morado y manga corta",
+				"talla": "XL",
+				"precio": "8000"
+			}
+		},
+		"ropaMujer":{
+			"0": {
+				"nombre": "Blusa de Algodón",
+				"descripcion": "Blusa floral con bordados de colores",
+				"talla": "S",
+				"precio": "20000"
+			},
+			"1": {
+				"nombre":"Vestido Floral",
+				"descripcion":"Vestido con estampado de flores",
+				"talla":"M",
+				"precio":"35000"
+			},
+			"2": {
+				"nombre":"Camisa de Mezclilla",
+				"descripcion":"Camisa color azul de mezclilla",
+				"talla":"L",
+				"precio":"25000"
+			},
+			"3": {
+				"nombre":"Pantalon de Vestir",
+				"descripcion":"Pantalon de material ligero en color beige",
+				"talla":"42",
+				"precio":"20000"
+			},
+			"4": {
+				"nombre":"Polera Floral",
+				"descripcion":"Polera con diseño de flores",
+				"talla":"S",
+				"precio":"6000"
+			},
+			"5": {
+				"nombre":"Poleron con Gorro",
+				"descripcion":"Poleron de algodón con capucha color negro",
+				"talla":"L",
+				"precio":"10000"
+			},
+			"6": {
+				"nombre":"Chaqueta de mezquilla",
+				"descripcion":"Descripción de la chaqueta de mezclilla.",
+				"talla":"S",
+				"precio":"20000"
+			},
+			"7": {
+				"nombre":"Sombrero estampado",
+				"descripcion":"Descripción del sombrero estampado.",
+				"talla":"Universal",
+				"precio":"13000"
+			},
+			"8": {
+				"nombre":"Jockey floral",
+				"descripcion":"Descripción del jockey floral.",
+				"talla":"S",
+				"precio":"5000"
+			}
+		},
+		"ropaInfantil":{
+			"0":{
+				"nombre": "Enterito color blanco",
+				"descripcion": "Enterito de algodon sin piernas color blanco",
+				"talla": "6",
+				"precio": "2500"
+			},
+			"1":{
+				"nombre": "Vestido color rosa",
+				"descripcion": "Vestido de color rosa sin mangas con bordados blancos",
+				"talla": "12",
+				"precio": "10000"
+			},
+			"2":{
+				"nombre": "Calcetines con vuelos",
+				"descripcion": "Pack de 3 pares de calcetines con vuelos",
+				"talla": "4",
+				"precio": "4000"
+			},
+			"3":{
+				"nombre": "Pantalon de buzo negro",
+				"descripcion": "Pantalon de buzo de algodón de color negro",
+				"talla": "10",
+				"precio": "8000"
+			},
+			"4":{
+				"nombre": "Chaqueta de algodón",
+				"descripcion": "Chaqueta de algodón color amarillo",
+				"talla": "8",
+				"precio": "12000"
+			},
+			"5":{
+				"nombre": "Pantalon de jeans",
+				"descripcion": "Pantalon  de tela jeans color azul marino",
+				"talla": "12",
+				"precio": "10000"
+			},
+			"6":{
+				"nombre": "Polera sin mangas",
+				"descripcion": "Polera sin mangas color blanco",
+				"talla": "6",
+				"precio": "5000"
+			},
+			"7":{
+				"nombre": "Camisa a cuadros",
+				"descripcion": "Camisa a cuadros color rojo y blanco",
+				"talla": "10",
+				"precio": "8000"
+			},
+			"8":{
+				"nombre": "Zapatos de charol",
+				"descripcion": "Zapatos de charol color negro con broche",
+				"talla": "21",
+				"precio": "14000"
+			}
+		},
+		"ropaUnisex":{
+			"0":{
+				"nombre": "Buzo deportivo",
+				"descripcion": "Buzo deportivo color gris con cordon y puños",
+				"talla": "M",
+				"precio": "8000"
+			},
+			"1":{
+				"nombre": "Chaleco con gorro",
+				"descripcion": "Chaleco canguro con gorro color amarillo",
+				"talla": "L",
+				"precio": "10000"
+			},
+			"2":{
+				"nombre": "Polera manga larga",
+				"descripcion": "Polera de manga larga color rojo",
+				"talla": "S",
+				"precio": "5000"
+			},
+			"3":{
+				"nombre": "Calcetines altos",
+				"descripcion": "Pack de 2 pares de calcetines altos de color blanco",
+				"talla": "Universal",
+				"precio": "3000"
+			},
+			"4":{
+				"nombre": "Chaqueta de mezclilla oversize",
+				"descripcion": "Chaqueta de mezclilla color celeste con fit oversize",
+				"talla": "L",
+				"precio": "15000"
+			},
+			"5":{
+				"nombre": "Pantalón de buzo",
+				"descripcion": "Pantalón de buzo color negro recto",
+				"talla": "M",
+				"precio": "8000"
+			},
+			"6":{
+				"nombre": "Pantalón de buzo",
+				"descripcion": "Pantalón de buzo color negro recto",
+				"talla": "XL",
+				"precio": "8000"
+			},
+			"7":{
+				"nombre": "Polera manga corta",
+				"descripcion": "Polera manga corta de algodón en color blanco",
+				"talla": "L",
+				"precio": "6000"
+			},
+			"8":{
+				"nombre": "Polera manga corta",
+				"descripcion": "Polera manga corta de algodón en color verde",
+				"talla": "XXL",
+				"precio": "4000"
+			}
+		}
+	}
+}

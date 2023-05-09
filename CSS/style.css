@@ -88,9 +88,18 @@ p{
     color: #e9e8e8;
     cursor: pointer;
 }
+.color-error{
+    color: #ff0000;
+    font-size: 13px;
+}
 /*Estilos pagina Carrito*/
 .altura-card{
     height: fit-content;
+}
+.cupon{
+    color: #12536d;
+    font-style: italic;
+    font-weight: bold;
 }
 
 /*Estilos página Login*/

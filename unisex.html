@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Assistant&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/ccca34c160.js" crossorigin="anonymous"></script>
+    
 </head>
 <body>
     <section>
@@ -41,22 +42,22 @@
                         <div class="collapse navbar-collapse" id="mynavbar">
                             <ul class="navbar-nav me-auto">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="hombre.html" id="linkHombre">Hombre</a>
+                                    <a class="nav-link" href="hombre.html">Hombre</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="mujer.html" id="linkMujer">Mujer</a>
+                                    <a class="nav-link" href="mujer.html">Mujer</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="infantil.html" id="linkInfantil">Niñ@s</a>
+                                    <a class="nav-link" href="infantil.html">Niñ@s</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="unisex.html" id="linkUnisex">Unisex</a>
+                                    <a class="nav-link" href="unisex.html">Unisex</a>
                                 </li>
                             </ul>
                             <form class="d-flex align-items-center">
                                 <a class="rounded me-2" href="login.html"><i class="fa-solid fa-user p-2 text-white"></i></a>
                                 <a class="rounded me-2" href="carrito.html"><i class="fa-solid fa-cart-shopping p-2 text-white"></i></a>
-
+                                
                                 <input class="form-control me-2" type="text" placeholder="buscar">
                                 <a href="javascript:void(0)"><i class="fa-solid fa-magnifying-glass p-2 text-white"></i></a>
                             </form>
@@ -65,61 +66,113 @@
                 </nav>
             </div>
         </header>
-        <!--Contenido carrito-->
-        <div class="container-fluid">
-            <h2 class="p-3 pt-5 align-items-start fuente-titulo">Carrito de compras</h2>
-            <br>
-            <div class="container-fluid">
-                <div class="row">
-                    <p class="col-md-9 col-sm-8 col-xs-12 p-5">Aún no has añadido ningún producto a tu carro</p>
-                    <div class="col-md-3 col-sm-4 col-xs-12 p-3 card text-end card-text altura-card">
-                        <form>
-                            <label for="cupon">¿Tienes algun cupón de descuento?</label>
-                            <input type="text" id="cupon" name="cupon" placeholder="INGRESE SU CUPÓN">
-                            <br>
-                            <br>
-                            <button type="button" class="btn btn-dark" onclick="valCupon()">APLICAR</button>
-                            <p id="mensaje" class="pt-2 mb-0 cupon"></p>
-                            <br>         
-                            <div class="row fw-bold">
-                                <p class="col pe-5">Subtotal:</p>
-                                <p class="col" id="total">25000</p>
-                            </div>
-                            <div class="row fw-bold">
-                                <p class="col pe-5">Descuentos:</p>
-                                <p class="col" id="desc">0</p>
-                            </div>
-                        </form>
+
+        <!--Titulo central-->
+        <div id="fuente-titulo" class="p-5 text-center">
+            <h1 class="fw-bold fs">Unisex</h1>
+            <p class="fst-italic">"Demosle una nueva vida a las prendas"</p>
+            <button class="btn btn-dark" id="linkUnisex">CARGAR</button>
+        </div>
+        <!--Productos unisex-->
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="producto card">
+                        <img src="Imagenes/200X250.png" alt="Prod0">
+                        <h2 class="pt-2" id="nom0"></h2>
+                        <hr>
+                        <p class="mb-0" id="desc0"></p>
+                        <p class="mt-0 mb-0" id="talla0"></p>
+                        <p class="mt-0" id="precio0"></p>
+                        <button class="color-boton">Añadir al carrito</button>
                     </div>
                 </div>
-                
-            </div>         
-            
-            <br>
-            <hr>
-        </div>
-        
-        <!-- Boton modal -->
-        <div class="container-fluid justify-content-end d-flex pe-4">
-            <button type="button" class="btn btn-outline-dark m-2 mb-4" data-bs-toggle="modal" data-bs-target="#confirmcarro">
-                Ir a pagar
-            </button>
-            
-        </div>
-        <!-- Modal -->
-        <div class="modal fade" id="confirmcarro" tabindex="-1" aria-labelledby="confirmcarroLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="confirmcarroLabel">¿Tienes lo necesario?</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="producto card">
+                        <img src="Imagenes/200X250.png" alt="Prod1">
+                        <h2 class="pt-2" id="nom1"></h2>
+                        <hr>
+                        <p class="mb-0" id="desc1"></p>
+                        <p class="mt-0 mb-0" id="talla1"></p>
+                        <p class="mt-0" id="precio1"></p>
+                        <button class="color-boton">Añadir al carrito</button>
                     </div>
-                    <div class="modal-body med">
-                    Si ya tienes todo puedes pasar al apartado de pagos y envios
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="producto card">
+                        <img src="Imagenes/200X250.png" alt="Prod2">
+                        <h2 class="pt-2" id="nom2"></h2>
+                        <hr>
+                        <p class="mb-0" id="desc2"></p>
+                        <p class="mt-0 mb-0" id="talla2"></p>
+                        <p class="mt-0" id="precio2"></p>
+                        <button class="color-boton">Añadir al carrito</button>
                     </div>
-                    <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
-                    <button type="button" class="btn btn-dark">Pagar</button>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="producto card">
+                        <img src="Imagenes/200X250.png" alt="Prod3">
+                        <h2 class="pt-2" id="nom3"></h2>
+                        <hr>
+                        <p class="mb-0" id="desc3"></p>
+                        <p class="mt-0 mb-0" id="talla3"></p>
+                        <p class="mt-0" id="precio3"></p>
+                        <button class="color-boton">Añadir al carrito</button>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="producto card">
+                        <img src="Imagenes/200X250.png" alt="Prod4">
+                        <h2 class="pt-2" id="nom4"></h2>
+                        <hr>
+                        <p class="mb-0" id="desc4"></p>
+                        <p class="mt-0 mb-0" id="talla4"></p>
+                        <p class="mt-0" id="precio4"></p>
+                        <button class="color-boton">Añadir al carrito</button>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="producto card">
+                        <img src="Imagenes/200X250.png" alt="Prod5">
+                        <h2 class="pt-2" id="nom5"></h2>
+                        <hr>
+                        <p class="mb-0" id="desc5"></p>
+                        <p class="mt-0 mb-0" id="talla5"></p>
+                        <p class="mt-0" id="precio5"></p>
+                        <button class="color-boton">Añadir al carrito</button>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="producto card">
+                        <img src="Imagenes/200X250.png" alt="Prod6">
+                        <h2 class="pt-2" id="nom6"></h2>
+                        <hr>
+                        <p class="mb-0" id="desc6"></p>
+                        <p class="mt-0 mb-0" id="talla6"></p>
+                        <p class="mt-0" id="precio6"></p>
+                        <button class="color-boton">Añadir al carrito</button>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="producto card">
+                        <img src="Imagenes/200X250.png" alt="Prod7">
+                        <h2 class="pt-2" id="nom7"></h2>
+                        <hr>
+                        <p class="mb-0" id="desc7"></p>
+                        <p class="mt-0 mb-0" id="talla7"></p>
+                        <p class="mt-0" id="precio7"></p>
+                        <button class="color-boton">Añadir al carrito</button>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="producto card">
+                        <img src="Imagenes/200X250.png" alt="Prod8">
+                        <h2 class="pt-2" id="nom8"></h2>
+                        <hr>
+                        <p class="mb-0" id="desc8"></p>
+                        <p class="mt-0 mb-0" id="talla8"></p>
+                        <p class="mt-0" id="precio8"></p>
+                        <button class="color-boton">Añadir al carrito</button>
                     </div>
                 </div>
             </div>
@@ -127,32 +180,7 @@
         <br>
         <br>
         <br>
-        <!-- Newsletter-->
-        <div class="container p-4 newsletter">
-            <p class="fw-bold m-0 fs-5">Suscribete a nuestro boletín</p>
-            <p class="small fst-italic">Recibe descuentos especiales y enterate de todas nuestras actualizaciones</p>
-            <div class="container d-flex p-0">
-                <a href="javascript:void(0)"><i class="fa-solid fa-envelope text-primary-emphasis pe-2 pt-1 fs-3" data-bs-toggle="modal" data-bs-target="#newsletter"></i></a>
-                <div class="modal fade" id="newsletter" tabindex="-1" aria-labelledby="newsletter" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h1 class="modal-title fs-5">¡Gracias por tu suscripción!</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body med">
-                                Te mantendremos al tanto de nuestras actualizaciones
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <input class="form-control" type="email" placeholder="nombre@correo.com" id="email" required>
-            </div>
-        </div>
-        <br>
-        <br>
-        <br>
-        <!--Footer-->
+        <!-- Aqui va lo ultimo de abajo -->
         <footer id="fuente-footer" class="row p-5 ancho-total m-0">
             <div class="col-xs-12 col-md-6 col-lg-3">
                 <h4 class="fw-bold">DALE LA VUELTA</h4>
