@@ -1,0 +1,161 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Dale la vuelta</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'venta/css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ccca34c160.js" crossorigin="anonymous"></script>
+        
+</head>
+<body id="fondo-body">
+    <a class="btn fs-1 text-primary-emphasis" href="{% url 'index' %}"><i class="fa-solid fa-shirt"></i></a>
+    <section id="estilo-body">
+        <div id="fuente-login" class="login row w-50">
+            <br>
+            <h1 class="text-center">Registrar usuario</h1>
+            <form class="needs-validation" id="myForm" action="{% url 'usuarioAdd' %}" method="POST">{% csrf_token %}
+                <br>
+                <!--
+                <div class="d-flex">
+                    
+                    <div class="form-group w-50 pe-2">
+                        <label class="form-label m" for="rut">Rut*</label>
+                        <input class="form-control" type="text" id="rut" name="rut" placeholder="123456789 / sin puntos ni guion">
+                    </div>
+                    <div class="form-group w-50 ps-2">
+                        <label class="form-label" for="email">Correo electrónico*</label>
+                        <input class="form-control" type="text" placeholder="nombre@correo.com" id="email" name="email">
+                        <span class="color-error" id="error1">El correo ingresado no es valido</span>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="form-group w-50 pe-2">
+                        <label class="form-label m" for="password1">Contraseña*</label>
+                        <input class="form-control" type="password" id="password1" placeholder="************" name="contrasena">
+                        <span class="color-error" id="error2">La contraseña debe tener 12 caracteres mínimo</span>
+                    </div>
+                    <div class="form-group w-50 ps-2">
+                        <label class="form-label m" for="password2">Repetir contraseña*</label>
+                        <input class="form-control" type="password" id="password2" placeholder="************">
+                        <span class="color-error" id="error3">Las contraseñas no coinciden</span>
+                    </div>
+                </div>
+                
+                <div class="d-flex">
+                    <div class="form-group w-50 pe-2">
+                        <label class="form-label m" for="pnombre">Primer nombre*</label>
+                        <input class="form-control" type="text" id="pnombre" name="pnombre">
+                    </div>
+                    <div class="form-group w-50 ps-2">
+                        <label class="form-label m" for="snombre">Segundo nombre</label>
+                        <input class="form-control" type="text" id="snombre" name="snombre" placeholder="opcional">
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="form-group w-50 pe-2">
+                        <label class="form-label m" for="appaterno">Apellido paterno*</label>
+                        <input class="form-control" type="text" id="appaterno" name="appaterno">
+                    </div>
+                    <div class="form-group w-50 ps-2">
+                        <label class="form-label m" for="apmaterno">Apellido materno</label>
+                        <input class="form-control" type="text" id="apmaterno" name="apmaterno" placeholder="opcional">
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="form-group w-50 pe-2">
+                        <label class="form-label m" for="nombre">Nombre de usuario*</label>
+                        <input class="form-control" type="text" id="nombre" name="nombre">
+                    </div>
+                    <div class="form-group w-50 ps-2">
+                        <label class="form-label m" for="direccion">Dirección*</label>
+                        <input class="form-control" type="text" id="direccion" name="direccion">
+                    </div>
+                </div>
+                -->
+                <div class="d-flex">
+                    
+                    <div class="form-group w-50 pe-2">
+                        <label class="form-label m" for="rut">Rut*</label>
+                        <input class="form-control" type="text" id="rut" name="rut" placeholder="123456789 / sin puntos ni guion">
+                    </div>
+                    <div class="form-group w-50 ps-2">
+                        <label class="form-label" for="email">Correo electrónico*</label>
+                        <input class="form-control" type="text" placeholder="nombre@correo.com" id="email" name="email">
+                        <span class="color-error" id="error1">El correo ingresado no es valido</span>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="form-group w-50 pe-2">
+                        <label class="form-label m" for="password1">Contraseña*</label>
+                        <input class="form-control" type="password" id="password1" placeholder="************" name="password">
+                        <span class="color-error" id="error2">La contraseña debe tener 12 caracteres mínimo</span>
+                    </div>
+                    <div class="form-group w-50 ps-2">
+                        <label class="form-label m" for="password2">Repetir contraseña*</label>
+                        <input class="form-control" type="password" id="password2" placeholder="************">
+                        <span class="color-error" id="error3">Las contraseñas no coinciden</span>
+                    </div>
+                </div>
+                
+                <div class="d-flex">
+                    <div class="form-group w-50 pe-2">
+                        <label class="form-label m" for="pnombre">Primer nombre*</label>
+                        <input class="form-control" type="text" id="pnombre" name="first_name">
+                    </div>
+                    <div class="form-group w-50 ps-2">
+                        <label class="form-label m" for="snombre">Segundo nombre</label>
+                        <input class="form-control" type="text" id="snombre" name="snombre" placeholder="opcional">
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="form-group w-50 pe-2">
+                        <label class="form-label m" for="appaterno">Apellido paterno*</label>
+                        <input class="form-control" type="text" id="appaterno" name="last_name">
+                    </div>
+                    <div class="form-group w-50 ps-2">
+                        <label class="form-label m" for="apmaterno">Apellido materno</label>
+                        <input class="form-control" type="text" id="apmaterno" name="apmaterno" placeholder="opcional">
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="form-group w-50 pe-2">
+                        <label class="form-label m" for="nombre">Nombre de usuario*</label>
+                        <input class="form-control" type="text" id="nombre" name="username">
+                    </div>
+                    <div class="form-group w-50 ps-2">
+                        <label class="form-label m" for="direccion">Dirección*</label>
+                        <input class="form-control" type="text" id="direccion" name="direccion">
+                    </div>
+                </div>
+                
+
+
+                <div class="container d-flex justify-content-center">
+                    <a class="small" href="{% url 'login' %}">Ya tengo una cuenta...</a>
+                </div>
+                <br>
+                <button type="submit" class="btn btn-primary w-100">REGISTRARME</button>
+                <!--<input type="submit" value="REGISTRARME">-->
+            </form>
+    
+        </div>
+    </section>
+    
+    
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js" integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+    <script src="{% static 'venta/js/script.js' %}"></script>
+</body>
+</html>
+<!---->

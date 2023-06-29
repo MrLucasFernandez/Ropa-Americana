@@ -1,0 +1,191 @@
+/*Estilos Generales*/
+*{
+    margin: 0;
+}
+body{
+    background-color: #e2e2e2;
+    width: 100%;
+}
+header{
+    background-color: #176786;
+    height: 15%;
+    width: 100%;
+}
+footer{
+    background-color: #212529;
+    height: 10%;
+}
+p{
+    font-family: 'Assistant', sans-serif;
+}
+
+/*Fuentes*/
+#fuente-header{
+    font-family: 'Signika', sans-serif;
+    color: #ffffff;
+}
+#fuente-titulo{
+    font-family: 'Josefin Sans', sans-serif;
+}
+#fuente-footer{
+    font-family: 'Signika', sans-serif;
+    color: #176786;
+    text-align: justify;
+}
+#fuente-login{
+    font-family: 'Quicksand', sans-serif;
+
+}
+/*Clases*/
+.right{
+    float: right;
+}
+.color-footer{
+    background-color: #176786;
+}
+.ancho-total{
+    width: 100%;
+}
+.mensaje-index{
+    width: 80%;
+}
+.justificar{
+    text-align: justify;
+}
+.formato-img-promo{
+    width: 100%;
+}
+.estilo-promocion{
+    background-color: #176786;
+    color: #e2e2e2;
+    padding: 4px;
+}
+.organizador-card{
+    display: flex;
+    justify-content: center;
+}
+.organizador-card img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.boton-carrusel{
+    background-color: #868686;
+    width: 5vh;
+    height: 5vh;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.color-boton{
+    background-color: #176786;
+    color: #ffffff;
+    border-radius: 5px;
+}
+.color-boton:hover{
+    background-color: #12536d;
+}
+.animacion:hover{
+    color: #e9e8e8;
+    cursor: pointer;
+}
+.color-error{
+    color: #ff0000;
+    font-size: 13px;
+}
+/*Estilos pagina Carrito*/
+.altura-card{
+    height: fit-content;
+}
+.cupon{
+    color: #12536d;
+    font-style: italic;
+    font-weight: bold;
+}
+
+/*Estilos página Login*/
+#estilo-body {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#fondo-body {
+    height: 100vh;
+    background-image: url(../Imagenes/login.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.login {
+    width: 360px;
+    height: min-content;
+    padding: 20px;
+    border-radius: 12px;
+    background: #ffffff;
+}
+
+.login h1 {
+    font-size: 36px;
+    margin-bottom: 25px;
+}
+
+.login form {
+    font-size: 20px;
+}
+
+.login form .form-group {
+    margin-bottom: 12px;
+}
+
+.login form input[type="submit"] {
+    font-size: 20px;
+    margin-top: 15px;
+}
+/*Estilos pagina Mujer*/
+/*.subcategoria{
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+*/
+.producto {
+	flex-basis: calc(50% - 20px);
+	margin-bottom: 40px;
+	background-color: #f7f7f7;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+.producto img {
+	display: block;
+	margin: 0 auto;
+}
+.formato-lista{
+    list-style: none;
+}
+.margen-card{
+    margin-top: auto;
+}
+
+
+/*Estilos Media Query*/
+@media screen and (max-width: 922px){
+    .newsletter{
+        width: 70%;
+        justify-content: center;
+    }
+    
+}
+@media screen and (min-width: 923px){
+    .newsletter{
+        width: 40%;
+        justify-content: center;
+    }
+    
+}
+
+
