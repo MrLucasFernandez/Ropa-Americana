@@ -6,7 +6,10 @@ urlpatterns = [
     path('',views.index_view,name=''),
     path('index/',views.index_view,name='index'),
     path('carrito/',views.carrito_view,name='carrito'),
-    path('detalle/',views.detalle_view,name='detalle'),
+    path('carrito_add/<str:pk>',views.carrito_add,name='carrito_add'),
+    path("carrito_del/", views.carrito_del, name="carrito_del"),
+    
+    path('detalle/<str:pk>', views.detalle_view,name='detalle'),
     path('hombre/',views.hombre_view,name='hombre'),
     path('mujer/',views.mujer_view,name='mujer'),
     path('infantil/',views.infantil_view,name='infantil'),
@@ -17,12 +20,14 @@ urlpatterns = [
     path('producto_add/',views.producto_add, name='producto_add'),
     path("producto_del/<str:pk>", views.producto_del, name="producto_del"),
     path("producto_find/<str:pk>", views.producto_find, name="producto_find"),
+    #path("producto_store/<str:pk>", views.producto_store, name="producto_store"),
     path("producto_update/", views.producto_update, name="producto_update"),
     path("producto_mod/", views.producto_mod, name="producto_mod"),
     
     path("search/", views.search, name="search"),
     path("producto_search/", views.producto_search, name="producto_search"),
     path("usuario/", views.usuario, name="usuario"),
+    path("pedido/", views.pedido_view, name="pedido"),
     
     path('prueba',views.prueba, name='prueba'),
     path('usuarioAdd/',views.usuarioAdd, name='usuarioAdd'),

@@ -83,51 +83,51 @@
         </header>
 
         <!--Detalle de producto-->
-        <div>
-            <h2 class="p-5 align-items-start fuente-titulo">Blusa de Algodón M-Talla S</h2>
-        </div>
+        <br>
+        <br>
+        <br>
+        <br>
         <div class="container">
             <div class="row">
                 <div class="col-lg-7 col-sm-12 d-block">
                     <div class="container d-flex justify-content-center">
-                        <img class="w-100" src="{% static 'venta/imagenes/blusa.png' %}" alt="imagen-producto">
+                        <img src="{{producto.imagen.url}}" alt="imagen-producto" class="w-75">
                     </div>
                 </div>
                 <div class="col-lg-5 col-sm-12 d-block">
                     <div>
                         <br>
-                        <h4>$5.000</h4>
+                        <p hidden>{{producto.id_producto}}</p>
+                        <h2>{{producto.nombre}}</h2>
+                        <br>
+                        <br>
+                        <h4>${{producto.precio}}</h4>
                         <br>
                     </div>
-                    <div>
-                        <div class="form-gruoup">
-                            <label for="talla">Talla</label>
-                            <select name="talla" id="talla">
-                                <option disabled selected value="">
-                                    Escoge una opción
-                                </option>
-                                <option value="">S</option>
-                            </select>
-                        </div>
+                        <h6 class="fw-medium">Categoria: <span class="fw-normal">{{producto.id_categoria}}</span></h6>
+                        <h6 class="fw-medium">Marca: <span class="fw-normal">{{producto.marca}}</span></h6>
+                        <h6 class="fw-medium">Talla: <span class="fw-normal">{{producto.talla}}</span></h6>
+                        
+                        
                         <br>
-                        <div>
-                            <div>
-                                <h4>Descripción</h4>
-                            </div>
-                            <div>
-                                <p class="justificar">Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                                    Corrupti eaque consequatur sed quis iste enim saepe illo necessitatibus, 
-                                    eius, cum minus soluta ipsam quasi dolorum nobis deserunt perferendis, 
-                                    nemo fugiat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, 
-                                    voluptates quos repellendus tenetur aliquam laudantium sed impedit a nam, repudiandae
-                                    error molestias corporis aspernatur eum cumque consequatur maxime quaerat doloribus!</p>
-                            </div>
-                        </div>
+                            
+                        <p class="justificar">{{producto.descripcion}}</p>
+                            
+                        
                         <br>
-                        <button>
-                            <i class="fa-solid fa-cart-shopping p-2 text-black"></i>
-                            Añadir al carro
-                        </button>
+                        <h6>Stock: {{producto.stock}}</h6>
+                        
+                        <a href="{% url 'carrito_add' pk=producto.id_producto %}">
+                            <button class="btn btn-outline-dark">
+                                <i class="fa-solid fa-cart-shopping p-2 text-black"></i>
+                                Añadir al carro
+                            </button>
+                        </a>
+                        <br>
+                        <br>
+                        {% if mensaje %}
+                            <p class="fst-italic">{{mensaje}}</p>
+                        {% endif %}
                     </div>
                 </div>
             </div>

@@ -159,7 +159,6 @@
         <br>
         <h2 id="fuente-titulo" class="p-4 text-center fw-bold">Productos destacados</h2>
         
-
         <!--  Carrusel productos -->
         <div>
             <div id="prod" class="carousel slide" data-bs-ride="carousel">
@@ -294,6 +293,53 @@
         </div>
         <br>
         <hr>
+
+        <!--  Carrusel productos DJANGO
+        <div>
+            <div id="prod" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="row">
+                    {% for i in productos %}
+                    
+                        <div class="col-md-3">
+                            <div class="carousel-item-active">
+                                <div class="card m-2">
+                                    <a href="javascript:void(0)">
+                                        <div class="">
+                                            <img src="{{i.imagen.url}}"  alt="card-product" width="120" height="150">
+                                        </div> 
+                                    </a>
+                                    <div class="card-body">
+                                        <h4 class="card-title">{{i.nombre}}</h4>
+                                        <p class="card-text">{{i.descripcion}}</p>
+                                        <p class="card-text mt-0 mb-0">Talla: {{i.talla}}</p>
+                                        <p class="card-text mt-0" >Precio: {{i.precio}}</p>
+                                    </div>
+                                </div>
+                                    
+                            </div>    
+                        </div>
+                        
+                    
+                    {% endfor %}
+                    </div>
+                    <div class="carousel-item">
+                        <div class="organizador-card">
+                            
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev boton-carrusel" type="button" data-bs-target="#prod" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next boton-carrusel" type="button" data-bs-target="#prod" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+        <br>
+        <hr>
+        -->
         <!--Mensaje-->
         <div class="container mensaje-index justify-content-center p-4">
             <div class="row p-4 ancho-total">
@@ -338,6 +384,32 @@
         </div>
         <br>
         <br>
+
+        
+        
+        <!-- Modal -->
+        <div class="modal fade" id="compraLista" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                ...
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        {% if mensaje %}
+        {% endif %}
+
+
+
         <br>
         <!-- Aqui va lo ultimo de abajo -->
         <footer id="fuente-footer" class="row p-5 ancho-total m-0">

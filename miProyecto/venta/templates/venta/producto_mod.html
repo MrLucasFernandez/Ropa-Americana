@@ -87,6 +87,15 @@
             <h1 class="fw-bold fs">Inventario de productos</h1>
             <p class="fst-italic">"Demosle una nueva vida a las prendas"</p>
         </div>
+        <br>
+        
+        <div class="text-center fs-4 fst-italic fw-bold">
+            {% if mensaje %}
+                {{mensaje}}
+            {% endif%}
+        </div>
+        <br>
+        <br>
         <!--Añadir productos-->
         <div class="container login w-75">
             <table>
@@ -100,7 +109,7 @@
                     <th>Precio</th>
                     <th>Stock</th>
                     
-                    {% for i in productos %}
+                    {% for i in productos reversed%}
                         
                         <tr class="table-group-divider">
                             <td class="fw-bold">{{i.id_producto}}</td>
@@ -114,7 +123,7 @@
                             <td class="fw-bold"><a href="{% url 'producto_find' pk=i.id_producto %}"> Modificar</a></td>
                             
                             <td></td>
-                            <td class="fw-bold"><a class=" text-danger" href="{% url 'producto_del' pk=i.id_producto %}">Eliminar</a></td>
+                            <td class="fw-bold"><a href="{% url 'producto_del' pk=i.id_producto %}" class=" text-danger" >Eliminar</a></td>
                         </tr>
                         
                     {% endfor %}
@@ -129,13 +138,29 @@
         <br>
         <br>
         
-        <div class="text-center fs-4 fst-italic fw-bold">
-            {% if mensaje %}
-                {{mensaje}}
-            {% endif%}
-        </div>
+        
         
         <br>
+        <!-- Modal eliminar
+        <div class="modal fade" id="confirmDel" tabindex="-1" aria-labelledby="confirmDelLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h1 class="modal-title fs-5" id="confirmDelLabel">¿Estas seguro que deseas eliminar?</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                Si estas seguro presiona el botón eliminar para quitar la información del producto del sistema.
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <a href="#" ><button type="button" class="btn btn-danger">Eliminar</button></a>
+                </div>
+            </div>
+            </div>
+        </div>
+        -->
+
         <br>
         <!-- Aqui va lo ultimo de abajo -->
         <footer id="fuente-footer" class="row p-5 ancho-total m-0">

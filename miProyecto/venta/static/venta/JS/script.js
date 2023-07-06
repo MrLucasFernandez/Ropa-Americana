@@ -31,6 +31,27 @@ function valCupon(){
         document.getElementById("mensaje").innerHTML = "El cupón ingresado no es válido";
     }
 }
+
+/*$(document).ready(function(){
+    let suma, precio;
+    suma = $("#total").val();
+    parseInt(suma);
+    precio = $("#precio").val();
+    console.log("hola")
+    parseInt(precio);
+    suma = suma + precio;
+
+
+    
+    $("#total").val = suma;
+    
+    
+})*/
+$(document).ready(function(){
+    $('#compraLista').modal('show');
+});
+
+
 /*Consumo de API*/
 $(document).ready(function(){
     $("#linkHombre").click(function(){

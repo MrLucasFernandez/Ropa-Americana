@@ -24,6 +24,19 @@ class Producto(models.Model):
     def __str__(self):
         return "ID: "+str(self.id_producto)+" "+str(self.nombre)+" /"+str(self.id_categoria)
 
+class Carrito(models.Model):
+    id_producto     = models.IntegerField()
+    id_categoria    = models.ForeignKey('Categoria', on_delete=models.CASCADE, db_column='idCategoria')
+    nombre          = models.CharField(max_length=25)
+    marca           = models.CharField(max_length=25)
+    descripcion     = models.CharField(max_length=200)
+    talla           = models.CharField(max_length=4)
+    precio          = models.IntegerField()
+    usuario         = models.CharField(max_length=25)
+
+    def __str__(self):
+        return "ID: "+str(self.id_producto)+" "+str(self.nombre)+" /"+str(self.id_categoria)
+
 class Cliente(models.Model):#Tomar como referencia tabla usuarios
     username        = models.CharField(max_length=20, primary_key=True)
     rut             = models.CharField(max_length=9)

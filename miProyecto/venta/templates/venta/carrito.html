@@ -86,8 +86,46 @@
             <br>
             <div class="container-fluid">
                 <div class="row">
-                    <p class="col-md-9 col-sm-8 col-xs-12 p-5">Aún no has añadido ningún producto a tu carro</p>
-                    <div class="col-md-3 col-sm-4 col-xs-12 p-3 card text-end card-text altura-card">
+                    {% if productos %}
+                    <div class="col-md-6 col-sm-8 col-xs-12 p-2">
+                        {% for i in productos %}
+                        <div class="producto card pb-0 pt-1 m-0">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <h4 class="pt-2">{{i.nombre}}</h4>
+                                    
+                                    <hr>
+                                    
+                                    
+                                    <p class="mt-0 mb-0 fw-bold">Categoria: <span class="fw-normal">{{i.id_categoria}}</span></p>
+                                    <p class="mt-0 mb-0 fw-bold">Marca: <span class="fw-normal">{{i.marca}}</span></p>
+                                    <p class="mt-0 mb-0 fw-bold">Talla: <span class="fw-normal">{{i.talla}}</span></p>
+                                    <p class="mt-0 fw-bold">Precio: <span class="fw-normal" id="precio">${{i.precio}}</span></p>
+                                    
+                                </div>
+                                <div class="col-md-5 col-sm-5 col-xs-12">
+                                    <p hidden>{{i.id_producto}}</p>
+                                    {% for im in imagenes %}
+                                        {% if im.id_producto is i.id_producto %}
+                                            <img src="{{im.imagen.url}}" width="160" height="200">
+                                        {% endif %}
+                                    {% endfor %}
+                                </div>
+                                <div class="col-md-1 col-sm-1 col-xs-12">
+                                    
+                                </div>
+                                <br>
+                                
+                            </div>
+                        </div>
+                        <p>{{cantidad}}</p>
+                        {% endfor %}
+                    </div>
+                    <div class="col-md-3 col-sm-1 col-xs-12"></div>
+                    {% else %}
+                        <p class="col-md-9 col-sm-8 col-xs-12 p-5">Aún no has añadido ningún producto a tu carro</p>
+                    {% endif %}
+                    <div class="col-md-3 col-sm-3 col-xs-12 p-3 card text-end card-text altura-card">
                         <form>
                             <label for="cupon">¿Tienes algun cupón de descuento?</label>
                             <input type="text" id="cupon" name="cupon" placeholder="INGRESE SU CUPÓN">
@@ -98,7 +136,7 @@
                             <br>         
                             <div class="row fw-bold">
                                 <p class="col pe-5">Subtotal:</p>
-                                <p class="col" id="total">25000</p>
+                                <p class="col" id="total">{{total}}</p>
                             </div>
                             <div class="row fw-bold">
                                 <p class="col pe-5">Descuentos:</p>
@@ -114,14 +152,22 @@
             <hr>
         </div>
         
-        <!-- Boton modal -->
-        <div class="container-fluid justify-content-end d-flex pe-4">
-            <button type="button" class="btn btn-outline-dark m-2 mb-4" data-bs-toggle="modal" data-bs-target="#confirmcarro">
-                Ir a pagar
-            </button>
-            
-        </div>
-        <!-- Modal -->
+        {% if productos %}
+        <!-- Boton modal compra-->
+            <div class="container-fluid justify-content-end d-flex pe-4">
+                <button type="button" class="btn btn-outline-dark m-2 mb-4" data-bs-toggle="modal" data-bs-target="#confirmcarro">
+                    Ir a pagar
+                </button>
+            </div>
+        {% else %}
+            <div class="container-fluid justify-content-end d-flex pe-4">
+                <button type="button" class="btn btn-outline-dark m-2 mb-4" data-bs-toggle="modal" data-bs-target="#sinCompra">
+                    Ir a pagar
+                </button>
+            </div>
+        {% endif %}
+
+        <!-- Modal con compra-->
         <div class="modal fade" id="confirmcarro" tabindex="-1" aria-labelledby="confirmcarroLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -134,12 +180,46 @@
                     </div>
                     <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
-                    <button type="button" class="btn btn-dark">Pagar</button>
+                    <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#compraLista">Pagar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="compraLista" tabindex="-1" aria-labelledby="compraListaLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="compraListaLabel">¡Enhorabuena!</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body med">
+                    Hemos confirmado tu compra, ahora puedes seguir navegando por nuestro sitio.
+                    </div>
+                    <div class="modal-footer">
+                    <a href="{% url 'carrito_del' %}"><button type="button" class="btn btn-primary">Listo</button></a>
                     </div>
                 </div>
             </div>
         </div>
         <br>
+        <!-- Modal sin compra-->
+        <div class="modal fade" id="sinCompra" tabindex="-1" aria-labelledby="sinCompraLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="sinCompraLabel">Aún no tienes productos en tu carro</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body med">
+                    Primero debes agregar productos a tu carro para poder realizar una compra.
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <br>
         <br>
         <!-- Newsletter-->

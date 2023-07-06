@@ -94,8 +94,9 @@
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     
                     <div class="producto card h-100 flex-column d-flex flex-grow-1">
+                        <p hidden>{{i.id_producto}}</p>
+                        <a href="{% url 'detalle' pk=i.id_producto %}"><img src="{{i.imagen.url}}" width="240" height="300"></a>
                         
-                        <img src="{{i.imagen.url}}" width="240" height="300">
                         <br>
                         <h2 class="pt-2 ">{{i.nombre}}</h2>
                         <div class="mt-auto">
@@ -103,7 +104,7 @@
                             <p class="mt-0 mb-0 fw-bold">Marca: <span class="fw-normal">{{i.marca}}</span></p>
                             <p class="mt-0 mb-0 fw-bold">Talla: <span class="fw-normal">{{i.talla}}</span></p>
                             <p class="mt-0 fw-bold">Precio: <span class="fw-normal">${{i.precio}}</span></p>
-                            <button class="color-boton w-100 p-1">Añadir al carrito</button>
+                            
                         </div>
                     </div>
                 </div>
